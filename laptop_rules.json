@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Premium Ultrabook",
+    "if": [
+      "budget_high",
+      "portable",
+      "long_battery"
+    ],
+    "then": "recommend:premium_ultrabook",
+    "priority": 10
+  },
+  {
+    "name": "Ultrabook Memory",
+    "if": [
+      "recommend:premium_ultrabook"
+    ],
+    "then": "spec:16gb_ram",
+    "priority": 4
+  },
+  {
+    "name": "Ultrabook Storage",
+    "if": [
+      "recommend:premium_ultrabook"
+    ],
+    "then": "spec:512gb_ssd",
+    "priority": 4
+  },
+  {
+    "name": "Budget Portable Laptop",
+    "if": [
+      "budget_low",
+      "portable"
+    ],
+    "then": "recommend:budget_lightweight",
+    "priority": 8
+  },
+  {
+    "name": "Budget Storage",
+    "if": [
+      "recommend:budget_lightweight"
+    ],
+    "then": "spec:256gb_ssd",
+    "priority": 3
+  },
+  {
+    "name": "Gaming Laptop",
+    "if": [
+      "gaming",
+      "budget_high"
+    ],
+    "then": "recommend:gaming_laptop",
+    "priority": 9
+  },
+  {
+    "name": "Dedicated Graphics",
+    "if": [
+      "recommend:gaming_laptop"
+    ],
+    "then": "spec:dedicated_gpu",
+    "priority": 6
+  },
+  {
+    "name": "Gaming Memory",
+    "if": [
+      "recommend:gaming_laptop"
+    ],
+    "then": "spec:16gb_ram",
+    "priority": 5
+  },
+  {
+    "name": "Budget Gaming Laptop",
+    "if": [
+      "gaming",
+      "budget_low"
+    ],
+    "then": "recommend:entry_level_gaming",
+    "priority": 8
+  },
+  {
+    "name": "Entry Gaming Graphics",
+    "if": [
+      "recommend:entry_level_gaming"
+    ],
+    "then": "spec:entry_level_gpu",
+    "priority": 4
+  },
+  {
+    "name": "Developer Laptop",
+    "if": [
+      "programming",
+      "budget_high"
+    ],
+    "then": "recommend:developer_laptop",
+    "priority": 8
+  },
+  {
+    "name": "Developer Memory",
+    "if": [
+      "recommend:developer_laptop"
+    ],
+    "then": "spec:16gb_ram",
+    "priority": 5
+  },
+  {
+    "name": "Affordable Coding Laptop",
+    "if": [
+      "programming",
+      "budget_low"
+    ],
+    "then": "recommend:budget_developer_laptop",
+    "priority": 8
+  },
+  {
+    "name": "Creative Workstation",
+    "if": [
+      "content_creation",
+      "budget_high"
+    ],
+    "then": "recommend:creator_workstation",
+    "priority": 9
+  },
+  {
+    "name": "Creator Display",
+    "if": [
+      "recommend:creator_workstation"
+    ],
+    "then": "spec:color_accurate_display",
+    "priority": 6
+  },
+  {
+    "name": "Creator Memory",
+    "if": [
+      "recommend:creator_workstation"
+    ],
+    "then": "spec:32gb_ram",
+    "priority": 5
+  },
+  {
+    "name": "Everyday Student Laptop",
+    "if": [
+      "student",
+      "budget_low"
+    ],
+    "then": "recommend:budget_student_laptop",
+    "priority": 7
+  },
+  {
+    "name": "Student Battery",
+    "if": [
+      "recommend:budget_student_laptop"
+    ],
+    "then": "spec:all_day_battery",
+    "priority": 4
+  },
+  {
+    "name": "Travel Ultraportable",
+    "if": [
+      "portable",
+      "long_battery",
+      "budget_low"
+    ],
+    "then": "recommend:travel_laptop",
+    "priority": 9
+  },
+  {
+    "name": "Travel Battery",
+    "if": [
+      "recommend:travel_laptop"
+    ],
+    "then": "spec:all_day_battery",
+    "priority": 5
+  }
+]
